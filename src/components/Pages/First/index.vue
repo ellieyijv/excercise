@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <div
-      class="container-fluid hero-banner text-white"
-      :style="{ backgroundImage: 'url(' + bannerImage + ')'}"
-    >
-      <h1>Hello Developer!</h1>
-      <h3>orem Ipsum Lorem Ipsum is simply dummy text of the printing</h3>
+  <div class="container-fluid p-0" id="first">
+    <div class="row">
+      <div
+        class="hero-banner text-white col-xs-12 w-100"
+        :style="{ backgroundImage: 'url(' + bannerImage + ')'}"
+      >
+        <h1>Hello Developer!</h1>
+        <h3>orem Ipsum Lorem Ipsum is simply dummy text of the printing</h3>
+      </div>
     </div>
-    <div class="container mx-auto my-5">
+    <div class="container my-5">
       <div class="row">
         <div class="col-xl-4 col-sm-12 col-md-6 py-2" v-for="card in cards" :key="card.title">
           <Card :card="card" />
@@ -30,7 +32,7 @@ export default {
   },
   data() {
     return {
-      bannerImage: this.$isMobile() ? mobileBannerImage : bannerImage,
+      bannerImage: null,
       cards: [
         {
           image: cardImg,
@@ -56,6 +58,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.bannerImage = this.$isMobile() ? mobileBannerImage : bannerImage
+  }
 };
 </script>
 
@@ -65,7 +70,8 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 25rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +80,7 @@ export default {
 }
 .hero-banner::after {
   background-color: #8f8f8f;
-  height: 600px;
+  height: 25rem;
   z-index: -1;
 }
 

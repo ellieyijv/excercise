@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view class="view"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -9,7 +9,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,10 +20,14 @@ export default {
   background-color: transparent;
   background-image: none;
   border-color: #333333;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: bold;
-  border-radius: 20px;
-  padding: 5px 20px;
-  border-width: 3px;
+  border-radius: 5em;
+  padding: 0.5em 1em;
+  border-width: 0.2em;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>
