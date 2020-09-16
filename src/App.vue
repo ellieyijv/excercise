@@ -9,12 +9,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .btn-default {
   color: #181818;
   background-color: transparent;
@@ -26,8 +27,15 @@ export default {
   padding: 0.5em 1em;
   border-width: 0.2em;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+}
 </style>
+

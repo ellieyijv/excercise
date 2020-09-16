@@ -59,13 +59,13 @@ export default {
     };
   },
   mounted() {
-    this.bannerImage = this.$isMobile() ? mobileBannerImage : bannerImage
-  }
+    this.bannerImage = this.$isMobile() ? mobileBannerImage : bannerImage;
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .hero-banner {
   background-size: cover;
   background-position: center;
@@ -77,15 +77,5 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.hero-banner::after {
-  background-color: #8f8f8f;
-  height: 25rem;
-  z-index: -1;
-}
-
-.hero-banner h1 {
-  font-size: 5rem;
-  font-weight: bolder;
 }
 </style>
