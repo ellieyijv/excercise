@@ -17,10 +17,10 @@ export default {
 }
 
 .btn-default {
-  color: #181818;
+  color: $btn_color;
   background-color: transparent;
   background-image: none;
-  border-color: #333333;
+  border-color: $btn_border_color;
   font-size: 1em;
   font-weight: bold;
   border-radius: 5em;
@@ -28,7 +28,7 @@ export default {
   border-width: 0.2em;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -36,6 +36,22 @@ body {
 h1 {
   font-size: 5rem;
   font-weight: bolder;
+}
+
+html {
+  font-size: $fontSize;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: $tablet_fontSize;
+  }
+}
+
+@media (max-width: 415px) {
+  html {
+    font-size: $mobile_fontSize;
+  }
 }
 </style>
 
