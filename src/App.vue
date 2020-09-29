@@ -42,6 +42,10 @@ html {
   font-size: $fontSize;
 }
 
+li {
+  list-style-type: none;
+}
+
 @media (max-width: 640px) {
   html {
     font-size: $tablet_fontSize;
